@@ -91,6 +91,7 @@ var addonsToSkip = [
 var platforms = {
     "osx": "OS X (Xcode)",
     "vs": "Windows (Visual Studio 2017)",
+    "msys2": "Windows (MINGW32 or MINGW64)",
     "ios": "iOS (Xcode)",
     "android": "Android (Android Studio)",
     "linux64": "Linux 64-bit (qtCreator)",
