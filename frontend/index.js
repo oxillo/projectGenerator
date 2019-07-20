@@ -34,6 +34,9 @@ try {
     var myPlatform = "Unknown";
     if (/^win/.test(process.platform)) {
         myPlatform = 'vs';
+        if( process.env.MSYSTEM ){
+            myPlatform = 'msys2';
+        }
     }
     // TODO: make the difference between osx and ios
     else if (process.platform === "darwin") {
