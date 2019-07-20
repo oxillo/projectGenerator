@@ -839,6 +839,13 @@ ipc.on('launchProjectinIDE', function(event, arg) {
             );
             }
         });
+    } else if( arg.platform == 'msys2'){
+        var windowsPath = pathTemp.join(fullPath, arg['projectName'] + '.qbs');
+        console.log( windowsPath );
+        windowsPath = "\"" + windowsPath + "\"";
+        exec('start ' + "\"\"" + " " + windowsPath, function callback(error, stdout, stderr){
+            return;
+        });
     } else if( hostplatform == 'windows'){
         var windowsPath = pathTemp.join(fullPath, arg['projectName'] + '.sln');
         console.log( windowsPath );
